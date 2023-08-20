@@ -1,0 +1,120 @@
+html {
+	font-family: 'Oswald', sans-serif;
+	height:100%;
+}
+
+body {
+	background-image: url('../images/mountain-range-wallpaper.jpg');
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	font-weight: bold;
+	color: black;
+	display: inline;
+}
+
+.top {
+	margin-left: 3%;
+	display: flex; 
+	gap: 20px;
+}
+
+.top>p {
+	border: 2px solid black;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.top>p:hover {
+	background-color: black;
+	color: white;
+	border: 2px solid white;
+}
+
+
+span {
+	margin-left: 20px;
+}
+
+.header-container {
+	margin-left: 15%;
+	padding-bottom: 20px;
+	top: 10px;
+	width: 70%;
+}
+
+.body-container {
+	display: flex; 
+	flex-direction: column;
+	gap: 20px;
+	margin-left: 15%;
+	text-align: center;
+	width: 70%;
+	max-height: 65vh;
+	overflow: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+.body-container::-webkit-scrollbar {
+	display: none;
+}
+
+.item {
+	background-color: antiquewhite;
+	border: 2px solid black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: auto; 
+}
+
+.strike {
+	text-decoration: line-through; 
+}
+
+
+div > p {
+	display: inline;
+	font-size: 20px;
+}
+
+.current {
+	opacity: 0.3; 
+} 
+
+.bottom-container {
+	margin-top: 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding-bottom: 20px;
+	width: 76.5%; 
+	height: 60px;
+	position: fixed;
+	bottom: 30px;
+}
+
+.form-container {
+	width: 91%;
+}
+
+.new-task {
+	width: 99.5%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	background-color: white;
+	color: black;
+	opacity: 0.4;
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+.new-task:hover {
+	opacity: 0.8;
+}
+

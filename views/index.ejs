@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/styles/main.css"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+	<title>To Do List </title>
+</head>
+
+<body>
+	<form action="/work" method="POST"> 
+		<div class="top"> 
+			<p class="current"> Home </p>
+			<p onclick="this.parentNode.parentNode.submit()"> Work </p>
+		</div>
+	</form>
+	
+	<div class="header-container"> 
+		<h1> Tasks for <%= date %> </h1>
+	</div>
+	<div class="body-container">
+		<% for(var i = 0; i < tasks.length; i++) { %>
+			<form action="/" required="required" method="POST"> 
+				<div class="item" onclick="this.parentNode.submit()"> 
+					<% if (tasks[i].completed) { %>
+						<input type="hidden" name="completed" value='{"<%=i%>" : "<%=tasks[i].completed%>"}'> 
+						<input type="checkbox" checked> 
+						<p class="strike"> <%= tasks[i].content %> </p>
+					<% } else { %>
+						<input type="hidden" name="completed" value='{"<%=i%>" : "<%=tasks[i].completed%>"}'> 
+						<input type="checkbox"> 
+						<p> <%= tasks[i].content %> </p>
+					<% } %>
+				</div> 	
+			</form> 
+		<% } %>
+	</div>	
+	<div class="bottom-container"> 
+		<div class="form-container"> 
+			<form action="/" method="POST"> 
+				<input type="text" required="required" class="new-task" name="new-task" placeholder="New task"> 
+			</form>	
+		</div>
+	</div>
+	
+</body>
+</html>
